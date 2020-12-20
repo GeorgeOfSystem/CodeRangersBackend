@@ -16,6 +16,8 @@ jobs:
       - name: firebase dependecies instalation
         run: pip install firebase
       - name: flake8 install
+        run: sudo apt-get install -y flake8
+      - name:  pip flake8 install
         run: pip install flake8
       - name: revision
         run: flake8 .\app.py
