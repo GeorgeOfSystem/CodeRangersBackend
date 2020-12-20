@@ -1,0 +1,23 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: flask dependecies instalation
+        run: pip install flask
+      - name: firebase dependecies instalation
+        run: pip install firebase
+      - name: flake8 install
+        run: pip flake8
+      - name: revision
+        run: flake8 app.py
+      - name: zip addition
+        uses: actions/upload-artifact@v2
+        with:
+          path: /dist
