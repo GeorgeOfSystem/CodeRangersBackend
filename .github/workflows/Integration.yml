@@ -13,8 +13,8 @@ jobs:
         run: pip install flask
       - name: firebase dependecies instalation
         run: pip install firebase
-      - name: pip install flake8
-        run: pip flake8
+      - name: flake8 install
+        run: pip install flake8
       - name: revision
         run: flake8 app.py
       - name: zip addition
