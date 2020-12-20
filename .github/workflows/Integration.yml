@@ -18,7 +18,7 @@ jobs:
       - name: flake8 install
         run: pip install flake8
       - name: revision
-        run: phyton flake8 app.py
+        run: flake8 app.py
       - name: zip addition
         uses: actions/upload-artifact@v2
         with:
