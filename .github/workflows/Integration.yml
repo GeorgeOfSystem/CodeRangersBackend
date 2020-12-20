@@ -20,4 +20,4 @@ jobs:
       - name: zip addition
         uses: actions/upload-artifact@v2
         with:
-          path: /dist
+          path: /app.py
