@@ -9,6 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+      - name: phyton instalation
+        run: sudo apt install python3.8
       - name: flask dependecies instalation
         run: pip install flask
       - name: firebase dependecies instalation
